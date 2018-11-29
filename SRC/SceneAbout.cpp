@@ -27,14 +27,17 @@ bool SceneAbout::init()
 	this->addChild(HelpLabel, 1);
 	Dictionary *strings = Dictionary::createWithContentsOfFile("language.xml");
 	const char *about = ((String*)strings->objectForKey("about"))->getCString(); //查找xml文件key值
-	
+	const char *about1 = ((String*)strings->objectForKey("about1"))->getCString(); //查找xml文件key值
 	//创建label标签菜单
 	auto label_about = LabelTTF::create(about, "fonts/站酷快乐体2016修订版.ttf", 24);
+	auto label_about1 = LabelTTF::create(about1, "fonts/站酷快乐体2016修订版.ttf", 24);
 
 
 	//设置坐标位置
 	label_about->setPosition(vOrigin.x + vSize.width / 2, vOrigin.y + vSize.height / 2 + 10);
+	label_about1->setPosition(vOrigin.x + vSize.width / 2, vOrigin.y + vSize.height / 2 + 30);
 	this->addChild(label_about, 2);
+	this->addChild(label_about1, 2);
 	
 	//添加按钮菜单项
 	auto backItem=MenuItemImage::create("homeon.png","homeoff.png",[](Object *sender)
