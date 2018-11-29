@@ -75,18 +75,18 @@ bool SceneGame::init()
 	//滑行和跳跃
 	score=0; //初始化分数
 	hp = 100;//初始化血量
-	slideBtn=Sprite::create("slideButton.png");
-	auto slideBtnTexture1=Sprite::create("slideButton.png")->getTexture();
-	auto slideBtnTexture2=Sprite::create("slideButtonPress.png")->getTexture();
+	slideBtn=Sprite::create("down.png");
+	auto slideBtnTexture1=Sprite::create("down.png")->getTexture();
+	auto slideBtnTexture2=Sprite::create("downpress.png")->getTexture();
 	slideBtnTextures.pushBack(slideBtnTexture1);
 	slideBtnTextures.pushBack(slideBtnTexture2);
 	slideBtn->setScale(0.5);
 	slideBtn->setPosition(Point(vOrigin.x+100,vOrigin.y+50));
 	this->addChild(slideBtn,2);
 
-	jumpBtn=Sprite::create("jumpButton.png");
-	auto jumpBtnTexture1=Sprite::create("jumpButton.png")->getTexture();
-	auto jumpBtnTexture2=Sprite::create("jumpButtonPress.png")->getTexture();
+	jumpBtn=Sprite::create("up.png");
+	auto jumpBtnTexture1=Sprite::create("up.png")->getTexture();
+	auto jumpBtnTexture2=Sprite::create("uppress.png")->getTexture();
 	jumpBtnTextures.pushBack(jumpBtnTexture1);
 	jumpBtnTextures.pushBack(jumpBtnTexture2);
 	jumpBtn->setScale(0.5);
@@ -385,7 +385,7 @@ void SceneGame::onEnter()
 	Layer::onEnter();
 	//播放音乐
 	if(isSound)
-		SimpleAudioEngine::getInstance()->playBackgroundMusic(level==SCHOOL?"spring_music.wav":"winter_music.mp3",true);
+		SimpleAudioEngine::getInstance()->playBackgroundMusic(level==SCHOOL?"sc_music.wav":"cn_music.mp3",true);
 }
 
 void SceneGame::onExit()
