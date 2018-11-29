@@ -37,15 +37,15 @@ bool SceneHelp::init()
 	const char *slide = ((String*)strings->objectForKey("slide"))->getCString(); //查找xml文件key值
 
 	//创建label标签菜单
-	    auto label_help = LabelTTF::create(help, "fonts/站酷快乐体2016修订版.ttf", 24);
-		auto label_jump = LabelTTF::create(jump, "fonts/站酷快乐体2016修订版.ttf", 24);
-		auto label_slide = LabelTTF::create(slide, "fonts/站酷快乐体2016修订版.ttf", 24);
+	    auto label_help = LabelTTF::create(help, "fonts/站酷快乐体2016修订版.ttf", 54);
+		auto label_jump = LabelTTF::create(jump, "fonts/站酷快乐体2016修订版.ttf", 34);
+		auto label_slide = LabelTTF::create(slide, "fonts/站酷快乐体2016修订版.ttf", 34);
 
-		//设置菜单坐标位置
-		label_help->setPosition(vOrigin.x + vSize.width / 2, vOrigin.y + vSize.height / 2 + 10);
-		label_jump->setPosition(vOrigin.x + vSize.width / 2, vOrigin.y + vSize.height / 2 + 30);
+		//设置坐标位置
+		label_help->setPosition(vOrigin.x + vSize.width / 2, vOrigin.y + vSize.height / 2 + 120);
+		label_jump->setPosition(vOrigin.x + vSize.width / 2+10, vOrigin.y + vSize.height / 2 + 30);
 
-		label_slide->setPosition(vOrigin.x + vSize.width / 2, vOrigin.y + vSize.height / 2 + 60);
+		label_slide->setPosition(vOrigin.x + vSize.width / 2+5, vOrigin.y + vSize.height / 2 - 60);
 
 
 		//添加进图层
