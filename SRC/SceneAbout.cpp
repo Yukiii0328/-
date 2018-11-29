@@ -32,7 +32,7 @@ bool SceneAbout::init()
 	auto label_about = LabelTTF::create(about, "fonts/站酷快乐体2016修订版.ttf", 24);
 
 
-	//设置菜单坐标位置
+	//设置坐标位置
 	label_about->setPosition(vOrigin.x + vSize.width / 2, vOrigin.y + vSize.height / 2 + 10);
 	this->addChild(label_about, 2);
 	
