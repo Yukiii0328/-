@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<plist version="1.0">  
+<dict>  
+ <key>help</key>  
+  <string>Help</string>
+ <key>jump</key>  
+  <string>跳跃:空格</string>
+ <key>slide</key>  
+  <string>下滑:S</string>
+ <key>about</key>  
+  <string>author:Liang Yongxi</string>
+</dict>  
+</plist>
